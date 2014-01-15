@@ -204,7 +204,7 @@ namespace Life
         {
             return lifeHistory.Count;
         }
-        
+
         public override string ToString()
         {
             StringBuilder output = new StringBuilder("Generation ");
@@ -228,7 +228,7 @@ namespace Life
                         else
                             output.Append("|");
                     }
-                    if (lifeHistory.Peek()[h,w])
+                    if (lifeHistory.Peek()[h, w])
                     {
                         output.Append("@");
                     }
@@ -249,12 +249,10 @@ namespace Life
             return output.ToString();
         }
 
-
         static void Main(string[] args)
         {
             Life life = new Life(true);
             life.Randomize(true);
-            //testGlider(life);
             while (life.GetGeneration() < 1000)
             {
                 Console.WriteLine(life);
